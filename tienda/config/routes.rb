@@ -1,4 +1,22 @@
 Tienda::Application.routes.draw do
+  resources :usuario_productos
+
+  resources :products
+
+  resources :productos
+
+  resources :users do
+	member do
+		get "add_product"
+	end
+  end
+  
+  resources :user_products
+  
+  resources :usuario_productos
+  
+  resources :people_books
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
